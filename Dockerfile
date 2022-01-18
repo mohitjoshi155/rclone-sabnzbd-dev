@@ -53,8 +53,6 @@ ENV XDG_CONFIG_HOME=/config
 
 USER sabnzbd
 
-EXPOSE 8080
-
 HEALTHCHECK --interval=120s --timeout=15s --start-period=120s --retries=3 \
             CMD wget --no-check-certificate --quiet --spider 'http://localhost:8080' && echo "Everything is fine..." || exit 1
 
